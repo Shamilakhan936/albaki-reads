@@ -1,0 +1,149 @@
+/* Card Container */
+.swiper {
+  width: 90%;
+  max-width: 1200px;
+  /* padding: 40px 0; */
+  padding-bottom: 80px;
+  /* height: 450px; */
+}
+.slider-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  /* width: 186px; */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  position: relative;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: #0e387a;
+  color: white;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* Book Image */
+.book-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Card Content */
+.card-content {
+  padding: 6px;
+}
+
+/* Book Title */
+.books-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0;
+  line-height: 135%;
+}
+
+/* Author Name */
+.author {
+  font-size: 13px;
+  color: #7286a6;
+  margin: 2px 0;
+}
+
+/* Price */
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.price span {
+  font-size: 14px;
+  color: #7286a6;
+}
+
+/* Shop Now Button */
+.shop-button {
+  width: 100%;
+  background: #5ea8aa;
+  color: white;
+  border: none;
+  padding: 11px 50px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.shop-button:hover {
+  background: #6bb797;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 96%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  padding: 12px 15px;
+  border-radius: 50%;
+  background-color: #0e387a;
+  font-size: 15px;
+  color: white;
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  padding: 12px 15px;
+  border-radius: 50%;
+  background-color: #0e387a;
+  font-size: 15px;
+  color: white;
+}
+.slider-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.slider-content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 135%;
+}
+.slider-content button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: #5ea8aa;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: var(--swiper-pagination-bottom, 14px);
+}
+.grid-view {
+  display: grid;
+
+  gap: 15px;
+}
+
+
+

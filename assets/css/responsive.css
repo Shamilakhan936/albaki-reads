@@ -1,0 +1,178 @@
+@media screen and (max-width: 768px) {
+  .menu,
+  .user-actions {
+    display: none;
+    /* Hide normal menu */
+  }
+
+  .navbar {
+    margin: 0%;
+    justify-content: space-between;
+    padding: 18px 16px;
+    width: 100%;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  .hero-content {
+    background-image: url(/assets/images/Frame\21\\(2\).png);
+    padding: 0 24px;
+    height: 695px;
+    width: fit-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .hero-section {
+    width: 100%;
+    margin: 0;
+    padding: 17px 16px;
+  }
+
+  .hero-badge {
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .hero-title {
+    width: 100%;
+    font-size: 44px;
+    font-weight: 700;
+  }
+
+  .dropdown {
+    display: none;
+    /* Hide dropdown menu */
+  }
+
+  .hamburger {
+    display: block;
+    /* Show hamburger button */
+  }
+
+  .mobile-menu.show {
+    display: flex;
+    /* Show mobile menu */
+  }
+
+  .featured-section {
+    width: 100%;
+    margin: 0;
+    padding: 17px 16px;
+  }
+
+  .book-slider {
+    flex-direction: column-reverse;
+    padding: 30px 0;
+    background: url(/assets/images/Frame\21\\(3\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .book-card-main {
+    width: 100%;
+  }
+
+  .next-btn {
+    left: 140px;
+  }
+
+  .dots-container {
+    left: 110px;
+  }
+
+  .highlighted-book {
+    margin-top: 60px;
+    padding: 0 20px;
+  }
+  .fearured-title {
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .section-title {
+    width: 27%;
+    font-size: 16px;
+    gap: 10px;
+  }
+}
+/* 📱 Mobile (Up to 640px) - 2 columns */
+@media (max-width: 640px) {
+  .swiper-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .slider-content h2 {
+    font-size: 24px;
+  }
+  .fearured-title span h2 {
+    font-size: 24px;
+  }
+
+  .slider-content button {
+    font-size: 16px;
+  }
+  .books-title {
+    font-size: 14px;
+  }
+  .author {
+    font-size: 12px;
+  }
+  .price {
+    font-size: 18px;
+  }
+  .price span {
+    font-size: 12px;
+  }
+  .shop-button {
+    font-size: 14px;
+    padding: 11px 22px;
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 14px);
+  }
+}
+
+/* 📲 Tablets (641px - 1024px) - 3 columns */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .swiper-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .slider-content h2 {
+    font-size: 30px;
+  }
+}
+
+/* 💻 Laptops & Desktops (1025px - 1440px) - 4 columns */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .swiper-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .card {
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1441px) {
+  .swiper-wrapper {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* 🖥️ Large Screens (1441px and above) - 6 columns */
+@media (min-width: 1441px) {
+  .swiper-wrapper {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .card {
+    width: 186px; /* Adjust width for larger screens */
+  }
+}
