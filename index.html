@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Albaki Reads</title>
+  </head>
+  <body>
+    <!-- header  -->
+    <section class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./assets/images/Group (1).png" alt="AlbakiReads Logo" />
+          <div class="dropdown" tabindex="0">
+            <button class="dropbtn">
+              Explore <img src="./assets/images/Vector.png" alt="" />
+            </button>
+            <div class="dropdown-content">
+              <div class="dropdown-column">
+                <a href="#">Holiday Gift Guide</a>
+                <a href="#">Used Books</a>
+                <a href="#">New Books</a>
+                <a href="#">Trending Titles</a>
+                <a href="#">Shelf Steals®</a>
+                <a href="#">Book Clubs</a>
+                <a href="#">Banned Books</a>
+                <a href="#">Textbooks</a>
+                <a href="#">Reading Challenge</a>
+                <a href="#">Gifts</a>
+              </div>
+              <div class="dropdown-column">
+                <a href="#">Arts & Architecture</a>
+                <a href="#">Biography & Memoir</a>
+                <a href="#">Business</a>
+                <a href="#">Children's</a>
+                <a href="#">Computer & Technology</a>
+                <a href="#">Cookbooks & Wine</a>
+                <a href="#">Crafts & Hobbies</a>
+                <a href="#">Education</a>
+                <a href="#">Family & Relationships</a>
+                <a href="#">Fiction</a>
+              </div>
+              <div class="dropdown-column">
+                <a href="#">Health & Fitness</a>
+                <a href="#">History</a>
+                <a href="#">Home & Garden</a>
+                <a href="#">Horror</a>
+                <a href="#">Manga & Graphic Novels</a>
+                <a href="#">Medical & Nursing</a>
+                <a href="#">Mystery & Thrillers</a>
+                <a href="#">Poetry </a>
+                <a href="#">Political Science</a>
+                <a href="#">Psychology</a>
+                <a href="#">Religion</a>
+              </div>
+              <div class="dropdown-column">
+                <a href="#">Romance</a>
+                <a href="#">Science Fiction</a>
+                <a href="#">Self Help</a>
+                <a href="#">Social Science</a>
+                <a href="#">Sports & Recreation</a>
+                <a href="#">Travel</a>
+                <a href="#">True Crime</a>
+                <a href="#">Young Adult</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu">
+          <input
+            type="text"
+            class="search-bar"
+            placeholder="Search by Title, Author, or ISBN"
+          />
+          <button class="search-btn">
+            <img src="./assets/images/search.png" alt="" />
+          </button>
+        </div>
+        <div class="user-actions">
+          <a href="#" class="sign-in"
+            >Sign In <img src="./assets/images/Vector.png" alt=""
+          /></a>
+          <div class="cart">
+            <img src="./assets/images/OBJECT.png" alt="Cart" />
+            <span class="cart-count">0</span>
+          </div>
+        </div>
+        <div class="hamburger-menu">
+          <!-- Hamburger Button -->
+          <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+          <!-- Cart Icon -->
+          <div class="cart">
+            <img src="./assets/images/OBJECT.png" alt="Cart" />
+            <span class="cart-count">0</span>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div class="mobile-menu" id="mobileMenu">
+            <input
+              type="text"
+              class="search-bar"
+              placeholder="Search by Title, Author, or ISBN"
+            />
+            <a href="#">Holiday Gift Guide</a>
+            <a href="#">Used Books</a>
+            <a href="#">New Books</a>
+            <a href="#">Trending Titles</a>
+            <a href="#">Shelf Steals®</a>
+            <a href="#">Book Clubs</a>
+            <a href="#">Banned Books</a>
+            <a href="#">Adaptations</a>
+            <a href="#">Textbooks</a>
+            <a href="#">Reading Challenge</a>
+            <a href="#">Gifts</a>
+            <a href="#">Textbooks</a>
+            <button>
+              <span>Sign In</span>
+              <span
+                ><img src="./assets/images/Vector.png" alt="Sign In"
+              /></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- hero section  -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-badge">Books That Transform Your Worldview</div>
+        <h1 class="hero-title">There is a book for every reader</h1>
+        <button class="hero-cta">Shop Now</button>
+      </div>
+    </section>
+    <!-- slider section  -->
+    <section class="slider-section">
+      <div class="swiper mySwiper">
+        <div class="slider-content">
+          <h2>New releases</h2>
+          <button class="view-all">
+            View all
+            <span class="icon"><img src="./assets/images/iconamoon_arrow-up-2.png" alt=""></span>
+          </button>
+        </div>
+        <div class="swiper-wrapper">
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/lisa-see.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/generation.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/the-women.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/lisa-see.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/generation.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/the-women.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/woods.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 8 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/lisa-see.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 9 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/generation.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 10 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/the-women.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 11 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/generation.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 12 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/woods.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 13 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/the-women.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="books-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- card 14 -->
+          <div class="swiper-slide">
+            <div class="card">
+              <div class="badge">Used Like New</div>
+              <img
+                src="./assets/images/lisa-see.png"
+                alt="Book Cover"
+                class="book-image"
+              />
+              <div class="card-content">
+                <h3 class="book-title">House of Flame and Shadow</h3>
+                <p class="author">Sarah J. Maas</p>
+                <p class="price"><strong>$12</strong> <span>USD</span></p>
+                <button class="shop-button">Shop Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Pagination Dots -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- features cards  -->
+    <section class="featured-section">
+      <div class="card-main">
+          <div class="fearured-title">
+              <span>
+                  <h2>Books for young readers</h2>
+              </span>
+              <span class="section-title">
+                  <p>View all</p> <img src="./assets/images/iconamoon_arrow-up-2.png" alt="">
+              </span>
+          </div>
+          <div class="book-slider">
+              <div class="highlighted-book">
+                  <div>
+                      <div class="rating">
+                          <img src="./assets/images/Stars.png" alt=""> <span class="reviews">24 reviews</span>
+                      </div>
+
+                      <h3>Burn Book: A Tech Love Story</h3>
+                      <p>Sarah J. Maas</p>
+                      <div class="tags">
+                          <span>LOVE</span>
+                          <span>LOREM IPSUM</span>
+                      </div>
+                  </div>
+                  <button class="shop-now">Shop Now</button>
+              </div>
+              <div class="book-card-main">
+                  <div class="book-cards">
+
+                      <div class="book-card">
+                          <img src="./assets/images/61431922._SY475_.png" alt="Getting to Yes">
+                          <span class="used-label">Used Like New</span>
+                      </div>
+                      <div class="book-card">
+                          <img src="./assets/images/61431922._SY475_.png" alt="Getting to Yes">
+                          <span class="used-label">Used Like New</span>
+                      </div>
+                      <div class="book-card">
+                          <img src="./assets/images/61431922._SY475_ (1).png" alt="Getting to Yes">
+                          <span class="used-label">Used Like New</span>
+                      </div>
+                      <div class="book-card">
+                          <img src="./assets/images/61431922._SY475_.png" alt="Getting to Yes">
+                          <span class="used-label">Used Like New</span>
+                      </div>
+                      <div class="book-card">
+                          <img src="./assets/images/61431922._SY475_.png" alt="Getting to Yes">
+                          <span class="used-label">Used Like New</span>
+                      </div>
+                      <div class="book-card">
+                          <img src="./assets/images/61431922._SY475_ (1).png" alt="Getting to Yes">
+                          <span class="used-label">Used Like New</span>
+                      </div>
+                  </div>
+                  <div class="slider-btns">
+                      <button class="prev-btn">&#10094;</button>
+                      <div class="dots-container"></div>
+                      <button class="next-btn">&#10095;</button>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+
+      </div>
+  </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JavaScript for Swiper -->
+    <script src="script.js"></script>
+  </body>
+</html>
