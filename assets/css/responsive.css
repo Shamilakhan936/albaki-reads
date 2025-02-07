@@ -83,7 +83,7 @@
   }
 
   .dots-container {
-    left: 110px;
+    left: 80px;
   }
 
   .highlighted-book {
@@ -99,11 +99,26 @@
     font-size: 16px;
     gap: 10px;
   }
+  .sign-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000917;
+    background: #f0f2f5;
+    border-radius: 12px;
+  }
 }
 /* 📱 Mobile (Up to 640px) - 2 columns */
 @media (max-width: 640px) {
   .swiper-wrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .support {
+    text-align: left;
   }
   .slider-content h2 {
     font-size: 24px;
@@ -146,6 +161,31 @@
   }
   .slider-content h2 {
     font-size: 30px;
+  }
+  .navbar {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .hero-section {
+    width: 90%;
+    /* margin-bottom: 0px; */
+  }
+  .featured-section {
+    width: 90%;
+    /* margin: auto; */
+  }
+  .menu {
+    width: 40%;
+  }
+  .next-btn {
+    left: 132%;
+  }
+  .dots-container {
+    left: 70%;
+  }
+  .hero-content {
+    padding: 100px 69px 100px;
+    background-size: cover;
   }
 }
 

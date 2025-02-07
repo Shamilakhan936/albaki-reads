@@ -1,16 +1,14 @@
-// akash
-document.addEventListener("DOMContentLoaded", () => {
-  const bookCardMain = document.querySelector(".book-card-main");
-  const prevBtn = document.querySelector(".prev-btn");
-  const nextBtn = document.querySelector(".next-btn");
-  const dotsContainer = document.querySelector(".dots-container");
-  const bookCards = document.querySelectorAll(".book-card");
-
-  const totalDots = 3;
+function initCarousel(
+  bookCardMain,
+  prevBtn,
+  nextBtn,
+  dotsContainer,
+  bookCards,
+  totalDots
+) {
   let currentIndex = 0;
   let cardWidth = bookCards[0].offsetWidth + 14;
 
-  // Create exactly 3 dots
   function createDots() {
     for (let i = 0; i < totalDots; i++) {
       let dot = document.createElement("div");
@@ -26,6 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
       .querySelectorAll(".dot")
       .forEach((dot) => dot.classList.remove("active"));
     document.querySelectorAll(".dot")[currentIndex].classList.add("active");
+  }
+
+  function updateSlider() {
+    let scrollAmount = currentIndex * cardWidth;
+    bookCardMain.scrollTo({
+      left: scrollAmount,
+      behavior: "smooth",
+    });
+    updateDots();
   }
 
   prevBtn.addEventListener("click", () => {
@@ -53,16 +60,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  function updateSlider() {
-    let scrollAmount = currentIndex * cardWidth;
-    bookCardMain.scrollTo({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
-    updateDots();
-  }
-
   createDots();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carousels = document.querySelectorAll(".book-card-main");
+
+  carousels.forEach((bookCardMain) => {
+    const prevBtn = bookCardMain.querySelector(".prev-btn");
+    const nextBtn = bookCardMain.querySelector(".next-btn");
+    const dotsContainer = bookCardMain.querySelector(".dots-container");
+    const bookCards = bookCardMain.querySelectorAll(".book-card");
+
+    initCarousel(bookCardMain, prevBtn, nextBtn, dotsContainer, bookCards, 3);
+  });
 });
 
 function toggleMenu() {
