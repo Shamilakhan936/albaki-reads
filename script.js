@@ -94,7 +94,6 @@ function toggleMenu() {
   }
 }
 
-// Ensure close button is hidden by default on page load
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".close-btn").style.display = "none";
 });
@@ -111,7 +110,6 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// Hide mobile menu on scroll
 let lastScrollTop = 0;
 window.addEventListener("scroll", function () {
   const menu = document.getElementById("mobileMenu");
@@ -125,7 +123,6 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop;
 });
 
-// Toggle Dropdown Menu
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownButton = document.getElementById("dropdownButton");
   const dropdownMenu = document.getElementById("dropdownMenu");
@@ -135,7 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdownMenu.classList.toggle("show");
   });
 
-  // Close dropdown if clicked outside
   document.addEventListener("click", function (event) {
     if (
       !dropdownButton.contains(event.target) &&
