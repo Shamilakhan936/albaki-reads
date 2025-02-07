@@ -43,7 +43,7 @@
               Explore <img src="./assets/images/Vector.png" alt="" />
             </button>
             <div class="dropdown-content">
-              <div class="dropdown-column">
+              <div class="dropdown-column colum-1" style="border-right: 1px solid #DEE3EC; ">
                 <a href="#">Holiday Gift Guide</a>
                 <a href="#">Used Books</a>
                 <a href="#">New Books</a>
@@ -114,44 +114,63 @@
         </div>
         <div class="hamburger-menu">
           <!-- Hamburger Button -->
-          <button class="hamburger" onclick="toggleMenu()">☰</button>
-
-          <!-- Cart Icon -->
           <div class="cart">
             <img src="./assets/images/OBJECT.png" alt="Cart" />
             <span class="cart-count">0</span>
           </div>
+          <div class="menu-toggle">
+            
+            <img src="/assets/images/open.png" alt="Open Menu" class="open-btn" onclick="toggleMenu()">
+            <img src="/assets/images/close.png" alt="Close Menu" class="close-btn" onclick="toggleMenu()">
+          </div>
+
+          <!-- Cart Icon -->
+          
 
           <!-- Mobile Menu -->
           <div class="mobile-menu" id="mobileMenu">
             <div class="search">
-              <input type="text" class="search-bar-small" placeholder="Search by Title, Author, or ISBN" />
-              <button class="search-btn-small">
-                <img src="./assets/images/search.png" alt="" />
-              </button>
+                <input type="text" class="search-bar-small" placeholder="Search by Title, Author, or ISBN" />
+                <button class="search-btn-small">
+                    <img src="./assets/images/search.png" alt="Search" />
+                </button>
             </div>
-            <button class="dropbtn-small">
-              Explore <img src="./assets/images/Vector.png" alt="" />
-            </button>
-            <div class="links-nav ">
-              <a href="#">Holiday Gift Guide</a>
-              <a href="#">Used Books</a>
-              <a href="#">New Books</a>
-              <a href="#">Trending Titles</a>
-              <a href="#">Shelf Steals®</a>
-              <a href="#">Book Clubs</a>
-              <a href="#">Banned Books</a>
-              <a href="#">Adaptations</a>
-              <a href="#">Textbooks</a>
-              <a href="#">Reading Challenge</a>
-              <a href="#">Gifts</a>
-              <a href="#">Textbooks</a>
+      
+            <button class="dropbtn-small" id="dropdownButton">
+              Explore <img src="./assets/images/Vector.png" alt="Dropdown" />
+          </button>
+      
+            <div class="links-nav" id="dropdownMenu">
+                <a href="#">Holiday Gift Guide</a>
+                <a href="#">Used Books</a>
+                <a href="#">New Books</a>
+                <a href="#">Trending Titles</a>
+                <a href="#">Shelf Steals®</a>
+                <a href="#">Book Clubs</a>
+                <a href="#">Banned Books</a>
+                <a href="#">Adaptations</a>
+                <a href="#">Textbooks</a>
+                <a href="#">Reading Challenge</a>
+                <a href="#">Gifts</a>
+                <a href="#">Arts & Architecture</a>
             </div>
+      
             <button class="sign-in">
-              Sign In
-              <span><img src="./assets/images/Vector.png" alt="Sign In" /></span>
+                Sign In
+                <span><img src="./assets/images/Vector.png" alt="Sign In" /></span>
             </button>
-          </div>
+      
+            <div class="social-icons-header">
+              <div class="header-img">
+
+                <img src="./assets/images/icons8-viber (3) 7.png" alt="Facebook">
+              </div>
+                <img src="./assets/images/icons8-viber (3) 8.png" alt="Twitter">
+                <img src="./assets/images/icons8-viber (3) 6 (1).png" alt="Instagram">
+            </div>
+        </div>
+      
+
         </div>
       </nav>
     </section>

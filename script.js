@@ -76,7 +76,72 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Toggle Mobile Menu
 function toggleMenu() {
-  const mobileMenu = document.getElementById("mobileMenu");
-  mobileMenu.classList.toggle("active");
+  const menu = document.getElementById("mobileMenu");
+  const openBtn = document.querySelector(".open-btn");
+  const closeBtn = document.querySelector(".close-btn");
+
+  menu.classList.toggle("active");
+
+  // Toggle visibility of open and close buttons
+  if (menu.classList.contains("active")) {
+    openBtn.style.display = "none";
+    closeBtn.style.display = "block";
+  } else {
+    openBtn.style.display = "block";
+    closeBtn.style.display = "none";
+  }
 }
+
+// Ensure close button is hidden by default on page load
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".close-btn").style.display = "none";
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener("click", function (event) {
+  const menu = document.getElementById("mobileMenu");
+  const menuToggle = document.querySelector(".menu-toggle");
+
+  if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+    menu.classList.remove("active");
+    document.querySelector(".open-btn").style.display = "block";
+    document.querySelector(".close-btn").style.display = "none";
+  }
+});
+
+// Hide mobile menu on scroll
+let lastScrollTop = 0;
+window.addEventListener("scroll", function () {
+  const menu = document.getElementById("mobileMenu");
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    menu.classList.remove("active");
+    document.querySelector(".open-btn").style.display = "block";
+    document.querySelector(".close-btn").style.display = "none";
+  }
+  lastScrollTop = scrollTop;
+});
+
+// Toggle Dropdown Menu
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownButton = document.getElementById("dropdownButton");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  dropdownButton.addEventListener("click", function (event) {
+    event.stopPropagation();
+    dropdownMenu.classList.toggle("show");
+  });
+
+  // Close dropdown if clicked outside
+  document.addEventListener("click", function (event) {
+    if (
+      !dropdownButton.contains(event.target) &&
+      !dropdownMenu.contains(event.target)
+    ) {
+      dropdownMenu.classList.remove("show");
+    }
+  });
+});

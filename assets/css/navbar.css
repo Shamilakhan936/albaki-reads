@@ -37,10 +37,13 @@
 .dropbtn:hover {
   color: #5ea8aa;
 }
-
+.colum-1 a {
+  color: #0e387a !;
+}
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 240%;
   background-color: white;
   padding: 15px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
@@ -193,23 +196,6 @@
   font-size: 12px;
 }
 
-/* Mobile Menu  */
-.mobile-menu {
-  position: absolute;
-  top: 175%;
-  right: 0;
-  width: 300px;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: none;
-  /* Hidden by default */
-  flex-direction: column;
-  padding: 10px;
-  z-index: 1000;
-  font-family: "Roboto";
-  padding-bottom: 40px;
-}
-
 /* Show Mobile Menu when Active */
 .mobile-menu.active {
   display: flex;
@@ -244,11 +230,115 @@
   background: #f0f2f5;
   color: #000917;
   border: none;
-  padding: 16px 20px;
+  padding: 16px;
   border-radius: 4px;
   cursor: pointer;
   justify-content: space-between;
 }
 .dropbtn-small:hover {
   color: #5ea8aa;
+}
+/* mobile screen navbar  */
+/* Hide desktop menu on small screens */
+@media screen and (max-width: 768px) {
+  .navbar .menu,
+  .navbar .user-actions,
+  .navbar .dropdown {
+    display: none; /* Hide desktop elements */
+  }
+
+  /* Show the hamburger menu */
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Mobile Menu (Initially Hidden) */
+
+  .mobile-menu {
+    position: fixed;
+    top: 78px;
+    right: 0;
+    width: 100%;
+    max-width: 768px;
+    background: white;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* Show mobile menu when active */
+  .mobile-menu.active {
+    transform: translateX(0);
+  }
+
+  /* Style for the mobile dropdown */
+  .links-nav {
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    background: #fff;
+    max-height: 250px;
+    overflow-y: auto;
+    border-top: none !important;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  /* Show dropdown when active */
+  .links-nav.active {
+    display: flex;
+  }
+
+  /* Hamburger Button */
+  .hamburger {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .search {
+    max-width: 100%;
+  }
+}
+.social-icons-header img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+.social-icons-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+/* Hide close and open buttons initially */
+.open-btn,
+.close-btn {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+/* Show open button when menu is closed */
+.menu-toggle .open-btn {
+  display: block;
+}
+
+/* Show close button when menu is open */
+.menu-toggle.menu-open .close-btn {
+  display: block;
+}
+
+.menu-toggle.menu-open .open-btn,
+.menu-toggle.menu-open .hamburger {
+  display: none;
+}
+.show {
+  display: flex;
 }
