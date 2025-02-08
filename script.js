@@ -146,3 +146,12 @@ function toggleDropdown() {
 
   content.style.display = content.style.display === "flex" ? "none" : "flex";
 }
+
+document.addEventListener("click", function (event) {
+  var content = document.getElementById("dropdownContent");
+  var dropdownButton = document.querySelector(".dropbtn");
+
+  if (!content.contains(event.target) && event.target !== dropdownButton) {
+    content.style.display = "none";
+  }
+});
