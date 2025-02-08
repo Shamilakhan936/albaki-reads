@@ -143,6 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 function toggleDropdown() {
   var content = document.getElementById("dropdownContent");
-  // Toggle visibility
+
   content.style.display = content.style.display === "flex" ? "none" : "flex";
 }
